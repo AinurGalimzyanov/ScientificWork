@@ -118,8 +118,8 @@ public class Startup
         // Database.
         services.AddDbContext<AppDbContext>(
             new DbContextOptionsSetup(databaseConnectionString).Setup);
-        services.AddAsyncInitializer<DatabaseInitializer>()
-            .AddAsyncInitializer<RoleInitializer>();
+        // services.AddAsyncInitializer<DatabaseInitializer>()
+        //    .AddAsyncInitializer<RoleInitializer>();
 
         // Logging.
         services.AddLogging(new LoggingOptionsSetup(configuration, environment).Setup);
